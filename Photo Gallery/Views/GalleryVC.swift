@@ -9,9 +9,12 @@ import UIKit
 
 class GalleryVC: UIViewController {
 
+    let viewModel = GalleryViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        viewModel.fetchImages()
     }
 
 

@@ -32,8 +32,9 @@ struct RequestManager {
         DLog("API URL: \(url)\nHeader data: \(String(describing: header))")
         NetworkManager.isReachable { (reachable) in
             if reachable {
-                let apiURL = url.url + Configuration().environment.token
-                AF.request(apiURL, method: HTTPMethod(rawValue: type.rawValue), parameters: params, encoding: JSONEncoding.default, headers: header).responseData { (responseData) -> Void in
+                var configuration = Configuration()
+                let apiURL = url.url + configuration.environment.token
+                AF.request(apiURL, method: HTTPMethod(rawValue: type.rawValue), parameters: params, encoding: type == .post ? JSONEncoding.default : URLEncoding.queryString, headers: header).responseData { (responseData) -> Void in
                     switch responseData.response?.statusCode {
                     case 200, 201:
                         switch responseData.result {
@@ -61,9 +62,10 @@ enum HttpURL: String {
     case PHOTOS           = "photos"
     
     var url: String {
+        var configuration = Configuration()
         switch self {
         case .PHOTOS:
-            return Configuration().environment.baseURL + rawValue
+            return configuration.environment.baseURL + rawValue
         }
     }
 }
