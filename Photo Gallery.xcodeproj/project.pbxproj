@@ -54,6 +54,7 @@
 				35207E5C284E520E00FE24F3 /* SDWebImage in Frameworks */,
 				35207E62284E53DC00FE24F3 /* Reachability in Frameworks */,
 				35207E5F284E525D00FE24F3 /* IHProgressHUD in Frameworks */,
+				3585EE2D284E7F8D00A81E49 /* NotificationBannerSwift in Frameworks */,
 				35207E59284E51DE00FE24F3 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +189,7 @@
 				35207E5B284E520E00FE24F3 /* SDWebImage */,
 				35207E5E284E525D00FE24F3 /* IHProgressHUD */,
 				35207E61284E53DC00FE24F3 /* Reachability */,
+				3585EE2C284E7F8D00A81E49 /* NotificationBannerSwift */,
 			);
 			productName = "Photo Gallery";
 			productReference = 35F58CBB284E374200B6A593 /* Photo Gallery.app */;
@@ -244,6 +246,7 @@
 				35207E5A284E520E00FE24F3 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				35207E5D284E525D00FE24F3 /* XCRemoteSwiftPackageReference "IHProgressHUD" */,
 				35207E60284E53DC00FE24F3 /* XCRemoteSwiftPackageReference "Reachability" */,
+				3585EE2B284E7F8D00A81E49 /* XCRemoteSwiftPackageReference "NotificationBanner" */,
 			);
 			productRefGroup = 35F58CBC284E374200B6A593 /* Products */;
 			projectDirPath = "";
@@ -603,6 +606,14 @@
 				version = 5.1.0;
 			};
 		};
+		3585EE2B284E7F8D00A81E49 /* XCRemoteSwiftPackageReference "NotificationBanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Daltron/NotificationBanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -625,6 +636,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 35207E60284E53DC00FE24F3 /* XCRemoteSwiftPackageReference "Reachability" */;
 			productName = Reachability;
+		};
+		3585EE2C284E7F8D00A81E49 /* NotificationBannerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3585EE2B284E7F8D00A81E49 /* XCRemoteSwiftPackageReference "NotificationBanner" */;
+			productName = NotificationBannerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
