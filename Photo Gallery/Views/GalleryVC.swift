@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GalleryVC.swift
 //  Photo Gallery
 //
 //  Created by Mahbubur Rashid Leon on 6/6/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GalleryVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
