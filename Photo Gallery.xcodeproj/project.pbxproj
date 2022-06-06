@@ -30,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35207E4D284E514100FE24F3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		35207E4E284E514100FE24F3 /* RequestManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManger.swift; sourceTree = "<group>"; };
+		35207E54284E514100FE24F3 /* LogHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogHelper.swift; sourceTree = "<group>"; };
 		35F58CBB284E374200B6A593 /* Photo Gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo Gallery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F58CBE284E374300B6A593 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35F58CC2284E374300B6A593 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +66,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35207E4A284E514100FE24F3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				35207E4B284E514100FE24F3 /* Managers */,
+				35207E4F284E514100FE24F3 /* Extensions */,
+				35207E54284E514100FE24F3 /* LogHelper.swift */,
+				35207E55284E514100FE24F3 /* Protocols */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		35207E4B284E514100FE24F3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				35207E4D284E514100FE24F3 /* NetworkManager.swift */,
+				35207E4E284E514100FE24F3 /* RequestManger.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		35207E4F284E514100FE24F3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		35207E55284E514100FE24F3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		35F58CB2284E374200B6A593 = {
 			isa = PBXGroup;
 			children = (
