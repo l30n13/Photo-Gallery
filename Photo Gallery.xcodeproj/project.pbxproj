@@ -10,6 +10,7 @@
 		35207E59284E51DE00FE24F3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 35207E58284E51DE00FE24F3 /* Alamofire */; };
 		35207E5C284E520E00FE24F3 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 35207E5B284E520E00FE24F3 /* SDWebImage */; };
 		35207E5F284E525D00FE24F3 /* IHProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 35207E5E284E525D00FE24F3 /* IHProgressHUD */; };
+		35207E62284E53DC00FE24F3 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 35207E61284E53DC00FE24F3 /* Reachability */; };
 		35F58CBF284E374300B6A593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F58CBE284E374300B6A593 /* AppDelegate.swift */; };
 		35F58CC3284E374300B6A593 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F58CC2284E374300B6A593 /* ViewController.swift */; };
 		35F58CC6284E374300B6A593 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F58CC4284E374300B6A593 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35207E5C284E520E00FE24F3 /* SDWebImage in Frameworks */,
+				35207E62284E53DC00FE24F3 /* Reachability in Frameworks */,
 				35207E5F284E525D00FE24F3 /* IHProgressHUD in Frameworks */,
 				35207E59284E51DE00FE24F3 /* Alamofire in Frameworks */,
 			);
@@ -145,6 +147,7 @@
 				35207E58284E51DE00FE24F3 /* Alamofire */,
 				35207E5B284E520E00FE24F3 /* SDWebImage */,
 				35207E5E284E525D00FE24F3 /* IHProgressHUD */,
+				35207E61284E53DC00FE24F3 /* Reachability */,
 			);
 			productName = "Photo Gallery";
 			productReference = 35F58CBB284E374200B6A593 /* Photo Gallery.app */;
@@ -200,6 +203,7 @@
 				35207E57284E51DE00FE24F3 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				35207E5A284E520E00FE24F3 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				35207E5D284E525D00FE24F3 /* XCRemoteSwiftPackageReference "IHProgressHUD" */,
+				35207E60284E53DC00FE24F3 /* XCRemoteSwiftPackageReference "Reachability" */,
 			);
 			productRefGroup = 35F58CBC284E374200B6A593 /* Products */;
 			projectDirPath = "";
@@ -550,6 +554,14 @@
 				minimumVersion = 0.1.8;
 			};
 		};
+		35207E60284E53DC00FE24F3 /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				kind = exactVersion;
+				version = 5.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -567,6 +579,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 35207E5D284E525D00FE24F3 /* XCRemoteSwiftPackageReference "IHProgressHUD" */;
 			productName = IHProgressHUD;
+		};
+		35207E61284E53DC00FE24F3 /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 35207E60284E53DC00FE24F3 /* XCRemoteSwiftPackageReference "Reachability" */;
+			productName = Reachability;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
