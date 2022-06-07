@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		351C4C6D284FA22B00099F72 /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351C4C6C284FA22B00099F72 /* Gallery.storyboard */; };
 		35207E59284E51DE00FE24F3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 35207E58284E51DE00FE24F3 /* Alamofire */; };
 		35207E5C284E520E00FE24F3 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 35207E5B284E520E00FE24F3 /* SDWebImage */; };
 		35207E5F284E525D00FE24F3 /* IHProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 35207E5E284E525D00FE24F3 /* IHProgressHUD */; };
@@ -24,7 +25,6 @@
 		3585EE35284E83F400A81E49 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 3585EE34284E83F400A81E49 /* RxCocoa */; };
 		35F58CBF284E374300B6A593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F58CBE284E374300B6A593 /* AppDelegate.swift */; };
 		35F58CC3284E374300B6A593 /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F58CC2284E374300B6A593 /* GalleryVC.swift */; };
-		35F58CC6284E374300B6A593 /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F58CC4284E374300B6A593 /* Gallery.storyboard */; };
 		35F58CC8284E374700B6A593 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F58CC7284E374700B6A593 /* Assets.xcassets */; };
 		35F58CCB284E374700B6A593 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F58CC9284E374700B6A593 /* LaunchScreen.storyboard */; };
 		35F58CD6284E374800B6A593 /* Photo_GalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F58CD5284E374800B6A593 /* Photo_GalleryTests.swift */; };
@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		351C4C6C284FA22B00099F72 /* Gallery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Gallery.storyboard; sourceTree = "<group>"; };
 		35207E4D284E514100FE24F3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		35207E4E284E514100FE24F3 /* RequestManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManger.swift; sourceTree = "<group>"; };
 		35207E54284E514100FE24F3 /* LogHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogHelper.swift; sourceTree = "<group>"; };
@@ -49,10 +50,9 @@
 		35207E6C284E6F2000FE24F3 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
 		35207E6E284E702100FE24F3 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		3585EE2E284E81FC00A81E49 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
-		35F58CBB284E374200B6A593 /* Photo Gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Photo Gallery.app"; path = "Photo Gallery Staging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		35F58CBB284E374200B6A593 /* Photo Gallery Staging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo Gallery Staging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F58CBE284E374300B6A593 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35F58CC2284E374300B6A593 /* GalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
-		35F58CC5284E374300B6A593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Gallery.storyboard; sourceTree = "<group>"; };
 		35F58CC7284E374700B6A593 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35F58CCA284E374700B6A593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35F58CCC284E374700B6A593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 		35F58CBC284E374200B6A593 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				35F58CBB284E374200B6A593 /* Photo Gallery.app */,
+				35F58CBB284E374200B6A593 /* Photo Gallery Staging.app */,
 				35F58CD1284E374800B6A593 /* Photo GalleryTests.xctest */,
 			);
 			name = Products;
@@ -182,7 +182,7 @@
 			children = (
 				35F58CC2284E374300B6A593 /* GalleryVC.swift */,
 				3585EE2E284E81FC00A81E49 /* GalleryCollectionViewCell.swift */,
-				35F58CC4284E374300B6A593 /* Gallery.storyboard */,
+				351C4C6C284FA22B00099F72 /* Gallery.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,7 +222,7 @@
 				3585EE34284E83F400A81E49 /* RxCocoa */,
 			);
 			productName = "Photo Gallery";
-			productReference = 35F58CBB284E374200B6A593 /* Photo Gallery.app */;
+			productReference = 35F58CBB284E374200B6A593 /* Photo Gallery Staging.app */;
 			productType = "com.apple.product-type.application";
 		};
 		35F58CD0284E374800B6A593 /* Photo GalleryTests */ = {
@@ -295,8 +295,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				35F58CCB284E374700B6A593 /* LaunchScreen.storyboard in Resources */,
+				351C4C6D284FA22B00099F72 /* Gallery.storyboard in Resources */,
 				35F58CC8284E374700B6A593 /* Assets.xcassets in Resources */,
-				35F58CC6284E374300B6A593 /* Gallery.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,14 +346,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		35F58CC4284E374300B6A593 /* Gallery.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				35F58CC5284E374300B6A593 /* Base */,
-			);
-			name = Gallery.storyboard;
-			sourceTree = "<group>";
-		};
 		35F58CC9284E374700B6A593 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

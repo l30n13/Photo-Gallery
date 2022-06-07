@@ -21,6 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 extension AppDelegate {
+    private func setupNavigation() {
+//        UINavigationBar.appearance().titleTextAttributes = [
+//            .foregroundColor: UIColor.white!,
+//            .font: UIFont.SFUIText(.medium, size: 17)
+//        ]
+//        UINavigationBar.appearance().barTintColor = .greyishBrownTwo
+    }
     private func setupProgressHUD() {
         IHProgressHUD.set(defaultStyle: .dark)
         IHProgressHUD.set(minimumDismiss: 0.3)

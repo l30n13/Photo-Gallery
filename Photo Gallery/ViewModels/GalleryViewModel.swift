@@ -8,17 +8,25 @@
 import Foundation
 import IHProgressHUD
 import NotificationBannerSwift
+import RxSwift
+import RxCocoa
 
 class GalleryViewModel {
-    var photos: [PhotosViewModel] = []
+    var photos = PublishSubject<[PhotosViewModel]>()
     
     func fetchImages() {
         IHProgressHUD.show()
-        RequestManager.request(using: .PHOTOS, params: nil, type: .get) { response in
+        var configuration = Configuration()
+        
+        let params = [
+            "count": 30,
+            "client_id": configuration.environment.token
+        ] as [String : AnyObject]
+        
+        RequestManager.request(using: .PHOTOS, params: params, type: .get) { response in
             IHProgressHUD.dismiss()
             if let responseData = try? JSONDecoder().decode([PhotosModel].self, from: response) {
-                self.photos = responseData.map(PhotosViewModel.init)
-                print(self.photos)
+                self.photos.onNext(responseData.map(PhotosViewModel.init))
             }
         } failure: { error in
             IHProgressHUD.dismiss()
@@ -28,6 +36,7 @@ class GalleryViewModel {
                 banner.show()
                 break
             case .networkProblem:
+                DLog("Network problem")
                 break
             case .errorDescription(let error):
                 DLog(error.localizedDescription)
