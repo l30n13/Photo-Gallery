@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SnapKit
 import SDWebImage
 
 class GalleryCollectionViewCell: UICollectionViewCell {
@@ -19,6 +18,7 @@ class GalleryCollectionViewCell: UICollectionViewCell {
         imageView.layer.shadowOffset = CGSize(width: 1, height: 1)
         imageView.layer.shadowOpacity = 0.5
         imageView.clipsToBounds = true
+        imageView.sd_imageTransition = .fade
     }
     
     func loadData(data: PhotosViewModel) {
