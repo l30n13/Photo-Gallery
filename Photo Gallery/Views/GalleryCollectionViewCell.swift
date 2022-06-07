@@ -27,15 +27,3 @@ class GalleryCollectionViewCell: UICollectionViewCell {
         }
     }
 }
-
-extension GalleryCollectionViewCell {
-    private func setupUI() {
-        addSubview(imageView)
-        imageView.snp.makeConstraints { make in
-            make.top.equalTo(contentView.snp.top).offset(10)
-            make.leading.equalTo(contentView.snp.leading).offset(10)
-            make.trailing.equalTo(contentView.snp.trailing).offset(-10)
-            make.bottom.equalTo(contentView.snp.bottom).offset(-10)
-        }
-    }
-}
