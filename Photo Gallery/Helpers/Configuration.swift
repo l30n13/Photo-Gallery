@@ -23,9 +23,9 @@ enum Environment: String {
     var token: String {
         switch self {
         case .STAGING:
-            return "?client_id=A_0G-_qOq8HfL-FvxGVH3oEuhASqWvRPQx2bdANLo00"
+            return "A_0G-_qOq8HfL-FvxGVH3oEuhASqWvRPQx2bdANLo00"
         case .PRODUCTION:
-            return "?client_id=A_0G-_qOq8HfL-FvxGVH3oEuhASqWvRPQx2bdANLo00"
+            return "A_0G-_qOq8HfL-FvxGVH3oEuhASqWvRPQx2bdANLo00"
         }
     }
 }
