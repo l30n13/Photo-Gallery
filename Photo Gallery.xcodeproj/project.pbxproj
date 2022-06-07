@@ -16,6 +16,7 @@
 		35207E6B284E6A8700FE24F3 /* PhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35207E6A284E6A8700FE24F3 /* PhotosModel.swift */; };
 		35207E6D284E6F2000FE24F3 /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35207E6C284E6F2000FE24F3 /* PhotosViewModel.swift */; };
 		35207E6F284E702100FE24F3 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35207E6E284E702100FE24F3 /* GalleryViewModel.swift */; };
+		357BF57C284FB66A00D9E8AB /* PreviewImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357BF57B284FB66A00D9E8AB /* PreviewImageVC.swift */; };
 		3585EE28284E711600A81E49 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35207E4D284E514100FE24F3 /* NetworkManager.swift */; };
 		3585EE29284E711900A81E49 /* RequestManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35207E4E284E514100FE24F3 /* RequestManger.swift */; };
 		3585EE2A284E711B00A81E49 /* LogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35207E54284E514100FE24F3 /* LogHelper.swift */; };
@@ -49,6 +50,7 @@
 		35207E6A284E6A8700FE24F3 /* PhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModel.swift; sourceTree = "<group>"; };
 		35207E6C284E6F2000FE24F3 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
 		35207E6E284E702100FE24F3 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		357BF57B284FB66A00D9E8AB /* PreviewImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewImageVC.swift; sourceTree = "<group>"; };
 		3585EE2E284E81FC00A81E49 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		35F58CBB284E374200B6A593 /* Photo Gallery Staging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo Gallery Staging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F58CBE284E374300B6A593 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			children = (
 				35F58CC2284E374300B6A593 /* GalleryVC.swift */,
 				3585EE2E284E81FC00A81E49 /* GalleryCollectionViewCell.swift */,
+				357BF57B284FB66A00D9E8AB /* PreviewImageVC.swift */,
 				351C4C6C284FA22B00099F72 /* Gallery.storyboard */,
 			);
 			path = Views;
@@ -322,6 +325,7 @@
 				35F58CC3284E374300B6A593 /* GalleryVC.swift in Sources */,
 				3585EE28284E711600A81E49 /* NetworkManager.swift in Sources */,
 				35207E6D284E6F2000FE24F3 /* PhotosViewModel.swift in Sources */,
+				357BF57C284FB66A00D9E8AB /* PreviewImageVC.swift in Sources */,
 				35F58CBF284E374300B6A593 /* AppDelegate.swift in Sources */,
 				35207E6B284E6A8700FE24F3 /* PhotosModel.swift in Sources */,
 			);

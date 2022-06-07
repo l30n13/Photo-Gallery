@@ -71,6 +71,49 @@
             </objects>
             <point key="canvasLocation" x="1031.8840579710145" y="123.88392857142857"/>
         </scene>
+        <!--Preview ImageVC-->
+        <scene sceneID="1Fj-5B-5mo">
+            <objects>
+                <viewController storyboardIdentifier="PreviewImageVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6o0-EE-gs0" customClass="PreviewImageVC" customModule="Photo_Gallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GaY-Up-9gK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="6" translatesAutoresizingMaskIntoConstraints="NO" id="1xf-3G-sWF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="58K-CE-Aro">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="58K-CE-Aro" firstAttribute="top" secondItem="1xf-3G-sWF" secondAttribute="top" id="HiZ-U9-H18"/>
+                                    <constraint firstAttribute="trailing" secondItem="58K-CE-Aro" secondAttribute="trailing" id="J7r-53-Re1"/>
+                                    <constraint firstItem="58K-CE-Aro" firstAttribute="leading" secondItem="1xf-3G-sWF" secondAttribute="leading" id="MhG-Pr-kd3"/>
+                                    <constraint firstItem="58K-CE-Aro" firstAttribute="height" secondItem="1xf-3G-sWF" secondAttribute="height" id="NOm-Ry-pCe"/>
+                                    <constraint firstItem="58K-CE-Aro" firstAttribute="width" secondItem="1xf-3G-sWF" secondAttribute="width" id="r7k-np-qFs"/>
+                                    <constraint firstAttribute="bottom" secondItem="58K-CE-Aro" secondAttribute="bottom" id="sIU-W9-Jmj"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0Vh-qV-sxt"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1xf-3G-sWF" firstAttribute="leading" secondItem="0Vh-qV-sxt" secondAttribute="leading" id="4ZO-6C-aXc"/>
+                            <constraint firstItem="0Vh-qV-sxt" firstAttribute="trailing" secondItem="1xf-3G-sWF" secondAttribute="trailing" id="Hkh-H6-qko"/>
+                            <constraint firstAttribute="bottom" secondItem="1xf-3G-sWF" secondAttribute="bottom" id="er2-AC-459"/>
+                            <constraint firstItem="1xf-3G-sWF" firstAttribute="top" secondItem="0Vh-qV-sxt" secondAttribute="top" id="ytB-aC-12J"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="58K-CE-Aro" id="iSK-e8-Jbn"/>
+                        <outlet property="scrollView" destination="1xf-3G-sWF" id="yu0-Ch-LWj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="snY-CT-f97" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1855" y="124"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cqb-jg-u42">
             <objects>

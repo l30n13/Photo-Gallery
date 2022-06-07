@@ -82,6 +82,14 @@ extension GalleryVC: UICollectionViewDataSource, UICollectionViewDelegate {
         cell.loadData(data: galleryImageList[indexPath.row])
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let vc = UIStoryboard(name: "Gallery", bundle: nil).instantiateViewController(withIdentifier: "PreviewImageVC") as? PreviewImageVC {
+            vc.data = galleryImageList[indexPath.row]
+            let navController = UINavigationController(rootViewController: vc)
+            self.navigationController?.present(navController, animated: true)
+        }
+    }
 }
 
 extension GalleryVC: UICollectionViewDelegateFlowLayout {
