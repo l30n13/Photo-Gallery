@@ -6,30 +6,30 @@
 //
 
 import Foundation
-import IHProgressHUD
 import NotificationBannerSwift
-import RxSwift
-import RxCocoa
 
 class GalleryViewModel {
-    var photos = PublishSubject<[PhotosViewModel]>()
+    var photos: [PhotosViewModel] = []
     
-    func fetchImages() {
-        IHProgressHUD.show()
+    var onCompleteLoading: (([PhotosViewModel]) -> Void)?
+    func fetchImages(page: Int) {
         var configuration = Configuration()
         
         let params = [
-            "count": 30,
+            "page": page,
+            "per_page": 20,
             "client_id": configuration.environment.token
         ] as [String : AnyObject]
         
-        RequestManager.request(using: .PHOTOS, params: params, type: .get) { response in
-            IHProgressHUD.dismiss()
+        
+        RequestManager.request(using: .PHOTOS, params: params, type: .get) { [weak self] response in
+            guard let self = self else { return }
+            
             if let responseData = try? JSONDecoder().decode([PhotosModel].self, from: response) {
-                self.photos.onNext(responseData.map(PhotosViewModel.init))
+                self.photos = responseData.map(PhotosViewModel.init)
+                self.onCompleteLoading?(self.photos)
             }
         } failure: { error in
-            IHProgressHUD.dismiss()
             switch error {
             case .noInternet:
                 let banner = FloatingNotificationBanner(title: "No Internet!", subtitle: "Please make sure you are connected to the internet. Thank you!", style: .danger)
@@ -42,6 +42,5 @@ class GalleryViewModel {
                 DLog(error.localizedDescription)
             }
         }
-
     }
 }

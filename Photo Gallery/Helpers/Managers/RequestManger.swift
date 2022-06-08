@@ -57,7 +57,7 @@ struct RequestManager {
 }
 
 enum HttpURL: String {
-    case PHOTOS           = "photos/random"
+    case PHOTOS           = "photos"
     
     var url: String {
         var configuration = Configuration()

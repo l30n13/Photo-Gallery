@@ -22,8 +22,6 @@
 		3585EE2A284E711B00A81E49 /* LogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35207E54284E514100FE24F3 /* LogHelper.swift */; };
 		3585EE2D284E7F8D00A81E49 /* NotificationBannerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3585EE2C284E7F8D00A81E49 /* NotificationBannerSwift */; };
 		3585EE2F284E81FC00A81E49 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3585EE2E284E81FC00A81E49 /* GalleryCollectionViewCell.swift */; };
-		3585EE32284E827F00A81E49 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3585EE31284E827F00A81E49 /* RxSwift */; };
-		3585EE35284E83F400A81E49 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 3585EE34284E83F400A81E49 /* RxCocoa */; };
 		35F58CBF284E374300B6A593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F58CBE284E374300B6A593 /* AppDelegate.swift */; };
 		35F58CC3284E374300B6A593 /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F58CC2284E374300B6A593 /* GalleryVC.swift */; };
 		35F58CC8284E374700B6A593 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F58CC7284E374700B6A593 /* Assets.xcassets */; };
@@ -67,10 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3585EE32284E827F00A81E49 /* RxSwift in Frameworks */,
 				35207E5C284E520E00FE24F3 /* SDWebImage in Frameworks */,
 				35207E62284E53DC00FE24F3 /* Reachability in Frameworks */,
-				3585EE35284E83F400A81E49 /* RxCocoa in Frameworks */,
 				35207E5F284E525D00FE24F3 /* IHProgressHUD in Frameworks */,
 				3585EE2D284E7F8D00A81E49 /* NotificationBannerSwift in Frameworks */,
 				35207E59284E51DE00FE24F3 /* Alamofire in Frameworks */,
@@ -221,8 +217,6 @@
 				35207E5E284E525D00FE24F3 /* IHProgressHUD */,
 				35207E61284E53DC00FE24F3 /* Reachability */,
 				3585EE2C284E7F8D00A81E49 /* NotificationBannerSwift */,
-				3585EE31284E827F00A81E49 /* RxSwift */,
-				3585EE34284E83F400A81E49 /* RxCocoa */,
 			);
 			productName = "Photo Gallery";
 			productReference = 35F58CBB284E374200B6A593 /* Photo Gallery Staging.app */;
@@ -280,7 +274,6 @@
 				35207E5D284E525D00FE24F3 /* XCRemoteSwiftPackageReference "IHProgressHUD" */,
 				35207E60284E53DC00FE24F3 /* XCRemoteSwiftPackageReference "Reachability" */,
 				3585EE2B284E7F8D00A81E49 /* XCRemoteSwiftPackageReference "NotificationBanner" */,
-				3585EE30284E827F00A81E49 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 35F58CBC284E374200B6A593 /* Products */;
 			projectDirPath = "";
@@ -648,14 +641,6 @@
 				minimumVersion = 3.0.0;
 			};
 		};
-		3585EE30284E827F00A81E49 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -683,16 +668,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3585EE2B284E7F8D00A81E49 /* XCRemoteSwiftPackageReference "NotificationBanner" */;
 			productName = NotificationBannerSwift;
-		};
-		3585EE31284E827F00A81E49 /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3585EE30284E827F00A81E49 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		3585EE34284E83F400A81E49 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3585EE30284E827F00A81E49 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

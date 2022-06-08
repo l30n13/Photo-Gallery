@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import RxSwift
+import IHProgressHUD
 
 class GalleryVC: UIViewController {
     lazy var refreshControl = UIRefreshControl()
@@ -25,14 +25,14 @@ class GalleryVC: UIViewController {
     
     private let viewModel = GalleryViewModel()
     private var galleryImageList: [PhotosViewModel] = []
-    private var bag = DisposeBag()
-
+    private var page: Int = 1
+    private var isReloaded = false, isLoading = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
-        viewModel.fetchImages()
-        bindCollectionData()
+        loadImages()
     }
 }
 
@@ -50,25 +50,40 @@ extension GalleryVC {
 }
 
 extension GalleryVC {
-    @objc private func refreshCollectionView(_ sender: Any) {
-        viewModel.fetchImages()
+    func loadImages() {
+        IHProgressHUD.show()
+        viewModel.fetchImages(page: page)
+        viewModel.onCompleteLoading = { [weak self] (data) in
+            IHProgressHUD.dismiss()
+            guard let self = self else { return }
+            self.galleryImageList = data
+            self.collectionView.reloadData()
+            
+            self.refreshControl.endRefreshing()
+        }
+    }
+    
+    func loadMoreImage() {
+        isLoading = true
+        page += 1
+        viewModel.fetchImages(page: page)
+        viewModel.onCompleteLoading = { [weak self] (data) in
+            guard let self = self else { return }
+            
+            self.isLoading = false
+            data.forEach { self.galleryImageList.append($0) }
+            self.collectionView.reloadData()
+            
+            self.refreshControl.endRefreshing()
+        }
     }
 }
 
 extension GalleryVC {
-    private func bindCollectionData() {
-        viewModel.photos.bind { [weak self] (data) in
-            print(data.count)
-            self?.galleryImageList = data
-            self?.collectionView.reloadData()
-            
-            self?.refreshControl.endRefreshing()
-            if data.count > 0 {
-                self?.collectionView.backgroundView = nil
-            } else {
-                self?.collectionView.backgroundView = self?.emptyLabel
-            }
-        }.disposed(by: bag)
+    @objc private func refreshCollectionView(_ sender: Any) {
+        isReloaded = false
+        page = 1
+        loadImages()
     }
 }
 
@@ -88,6 +103,12 @@ extension GalleryVC: UICollectionViewDataSource, UICollectionViewDelegate {
             vc.data = galleryImageList[indexPath.row]
             let navController = UINavigationController(rootViewController: vc)
             self.navigationController?.present(navController, animated: true)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == galleryImageList.count - 4 && !self.isLoading {
+            loadMoreImage()
         }
     }
 }
