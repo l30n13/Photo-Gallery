@@ -36,6 +36,8 @@ class GalleryViewModel {
                 banner.show()
                 break
             case .networkProblem:
+                let banner = FloatingNotificationBanner(title: "Network problem", subtitle: "There is a problem fetching image. Please try again later.", style: .danger)
+                banner.show()
                 DLog("Network problem")
                 break
             case .errorDescription(let error):

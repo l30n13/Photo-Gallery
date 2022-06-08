@@ -73,8 +73,6 @@ extension GalleryVC {
             self.isLoading = false
             data.forEach { self.galleryImageList.append($0) }
             self.collectionView.reloadData()
-            
-            self.refreshControl.endRefreshing()
         }
     }
 }
